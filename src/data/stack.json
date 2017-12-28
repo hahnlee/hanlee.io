@@ -1,0 +1,34 @@
+{
+  "android": {
+    "homepage": "",
+    "logo": ""
+  },
+  "electron": {
+    "homepage": "",
+    "logo": ""
+  },
+  "kotlin": {
+    "homepage": "",
+    "logo": ""
+  },
+  "python": {
+    "homepage": "",
+    "logo": ""
+  },
+  "react": {
+    "homepage": "",
+    "logo": ""
+  },
+  "realm": {
+    "homepage": "",
+    "logo": ""
+  },
+  "redux": {
+    "homepage": "",
+    "logo": ""
+  },
+  "rx": {
+    "homepage": "",
+    "logo": ""
+  }
+}
