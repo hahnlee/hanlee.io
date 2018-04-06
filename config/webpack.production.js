@@ -4,13 +4,11 @@ const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { commonConfig } = require('./webpack.common');
 
 const renderConfig = merge({}, commonConfig, {
-  entry: path.resolve(__dirname, '..', 'src', 'export.js'),
-  target: 'node',
-  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -39,10 +37,15 @@ const renderConfig = merge({}, commonConfig, {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '..', 'static', 'index.html'),
+      hash: true,
+    }),
   ],
   node: {
     fs: 'empty',
   },
+  mode: 'production',
 });
 
 module.exports = renderConfig;

@@ -20,7 +20,11 @@
     {
       "logo": "mail",
       "link": "mailto:hanlee.dev@gmail.com"
+    },
+    {
+      "logo": "resume",
+      "link": "https://drive.google.com/file/d/1YG7sYJuGcm7Dp_43efZcgzQ5j9ik9gMH/view?usp=sharing"
     }
   ],
-  "location": "Seoul, South Korea"
+  "location": "Ulsan, South Korea"
 }

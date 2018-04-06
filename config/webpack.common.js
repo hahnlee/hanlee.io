@@ -25,7 +25,7 @@ const commonConfig = {
         },
       },
       {
-        test: /\.(png|svg)$/,
+        test: /\.(png|svg|pdf)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]?[hash]',
