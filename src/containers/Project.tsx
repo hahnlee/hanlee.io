@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-import stackInfo from '../data/stack.json';
-import projectInfo from '../data/project.json';
+import { StackData } from '../data/stack';
+import { ProjectData, IProjectInfo } from '../data/project';
 
 import './Project.scss';
 
-class App extends Component {
-  constructor(props) {
+interface ProjcetProps {};
+
+interface ProjcetState {
+  stack: string,
+};
+
+export default
+class Projcet extends React.Component<ProjcetProps, ProjcetState> {
+  constructor(props: ProjcetProps) {
     super(props);
     this.state = {
       stack: '',
@@ -15,13 +22,13 @@ class App extends Component {
     this.filterByStack = this.filterByStack.bind(this);
   }
 
-  onInputChange(e) {
+  onInputChange(e: React.FormEvent<HTMLInputElement>) {
     this.setState({
-      stack: e.target.value,
+      stack: (e.target as HTMLInputElement).value,
     });
   }
 
-  filterByStack(obj) {
+  filterByStack(obj: IProjectInfo) {
     if (this.state.stack) {
       return obj.stack.includes(this.state.stack.toLowerCase());
     }
@@ -29,13 +36,13 @@ class App extends Component {
   }
 
   render() {
-    const filteredStack = projectInfo.data.filter(this.filterByStack);
+    const filteredStack = ProjectData.data.filter(this.filterByStack);
 
-    const renderStack = filteredStack.map((data, index) => (
+    const renderStack: React.ReactNode = filteredStack.map((data, index) => (
       <div key={index} className={`project${index % 2 ? '' : ' gray-bg'}`}>
         <figure className="img-wrap">
           <img
-            src={require(`../assets/img/project/${data.title_img}`)}
+            src={require(`../assets/img/project/${data.titleImg}`)}
           />
         </figure>
         <div className="description">
@@ -56,7 +63,7 @@ class App extends Component {
       </div>
     ));
 
-    const noResult = (
+    const noResult: React.ReactNode = (
       <div className="no-result">
         {`There's No Public Projcet of "${this.state.stack}" :(`}
       </div>
@@ -75,5 +82,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

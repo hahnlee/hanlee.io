@@ -1,14 +1,13 @@
-const path = require('path');
+import * as path from 'path';
 
-const autoprefixer = require('autoprefixer');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import * as autoprefixer from 'autoprefixer';
+import * as webpack from 'webpack';
+import * as merge from 'webpack-merge';
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-const { commonConfig } = require('./webpack.common');
+import { commonConfig } from './webpack.common';
 
-const renderConfig = merge({}, commonConfig, {
+export default merge({}, commonConfig, {
   module: {
     rules: [
       {
@@ -23,7 +22,14 @@ const renderConfig = merge({}, commonConfig, {
               loader: 'postcss-loader',
               options: {
                 plugins: [
-                  autoprefixer(),
+                  autoprefixer({
+                    browsers: [
+                      '>1%',
+                      'last 4 versions',
+                      'Firefox ESR',
+                      'not ie < 9' // React doesn't support IE8 anyway
+                    ],
+                  }),
                 ],
               },
             },
@@ -37,15 +43,9 @@ const renderConfig = merge({}, commonConfig, {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'static', 'index.html'),
-      hash: true,
-    }),
   ],
   node: {
     fs: 'empty',
   },
   mode: 'production',
 });
-
-module.exports = renderConfig;

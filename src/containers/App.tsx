@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 
 import { About, Project, } from 'containers';
 
 import './App.scss';
 
-const App = () => (
+const App: React.SFC<{}> = () => (
   <main className="application">
     <About/>
     <Project/>

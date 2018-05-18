@@ -1,12 +1,12 @@
-const fs = require('fs');
+import * as fs from 'fs';
 
-import React from 'react';
-import ReactDOMServer from 'react-dom/server';
+import * as React from 'react';
+import * as ReactDOMServer from 'react-dom/server';
 
 import { App } from 'containers';
 
-const reactHtml = ReactDOMServer.renderToStaticMarkup(<App/>);
-const html = `
+const reactHtml: string = ReactDOMServer.renderToStaticMarkup(<App/>);
+const html: string = `
 <!DOCTYPE html>
 <html>
   <head>

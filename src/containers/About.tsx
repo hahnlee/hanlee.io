@@ -1,13 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 
-import aboutInfo from '../data/about.json';
+import { AboutData } from '../data/about';
 import './About.scss';
 
-const About = () => (
+const About: React.SFC<{}> = () => (
   <section className="about">
     <h1>Han Lee</h1>
     <div className="out-links">
-      {aboutInfo['out-links'].map((data, index) => (
+      {AboutData.outLinks.map((data, index) => (
         <a key={index} href={data.link} target="_blink">
           <img
             src={require(`../assets/img/feather/${data.logo}.svg`)}
@@ -21,7 +21,7 @@ const About = () => (
         src={require('../assets/img/feather/map-pin.svg')}
         alt="map"
       />
-      {aboutInfo.location}
+      {AboutData.location}
     </div>
   </section>
 );

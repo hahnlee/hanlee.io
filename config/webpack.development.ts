@@ -1,22 +1,21 @@
-const path = require('path');
+import * as path from 'path';
 
-const autoprefixer = require('autoprefixer');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
+import * as autoprefixer from 'autoprefixer';
+import * as webpack from 'webpack';
+import * as merge from 'webpack-merge';
 
-const { commonConfig } = require('./webpack.common');
+import { commonConfig } from './webpack.common';
 
-const renderConfig = merge({}, commonConfig, {
+export default merge({}, commonConfig, {
   devtool: 'source-map',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.js?v=[hash]',
     path: path.resolve(__dirname, '..', 'out'),
   },
   entry: [
     require.resolve('webpack-dev-server/client') + '?/',
     require.resolve('webpack/hot/dev-server'),
-    commonConfig.entry,
+    commonConfig.entry as string,
   ],
   module: {
     rules: [
@@ -36,7 +35,14 @@ const renderConfig = merge({}, commonConfig, {
             loader: 'postcss-loader',
             options: {
               plugins: [
-                autoprefixer(),
+                autoprefixer({
+                  browsers: [
+                    '>1%',
+                    'last 4 versions',
+                    'Firefox ESR',
+                    'not ie < 9' // React doesn't support IE8 anyway
+                  ],
+                }),
               ],
             },
           },
@@ -46,9 +52,6 @@ const renderConfig = merge({}, commonConfig, {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'static', 'index.html'),
-    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, '..', 'out'),
@@ -59,5 +62,3 @@ const renderConfig = merge({}, commonConfig, {
   },
   mode: 'development',
 });
-
-module.exports = renderConfig;

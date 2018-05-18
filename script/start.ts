@@ -1,10 +1,10 @@
-const webpack = require('webpack');
-const WebpackDevServer = require('webpack-dev-server');
+import * as webpack from 'webpack';
+import * as WebpackDevServer from 'webpack-dev-server';
 
-const renderConfig = require('../config/webpack.development');
+import renderConfig from '../config/webpack.development';
 
-const compiler = webpack(renderConfig);
-const port = process.env.PORT || 3000;
+const compiler: webpack.Compiler = webpack(renderConfig);
+const port: number = 3000;
 
 let devServer = new WebpackDevServer(compiler, renderConfig.devServer);
 devServer.listen(port, 'localhost', err => {
