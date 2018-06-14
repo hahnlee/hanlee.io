@@ -6,7 +6,7 @@ import * as webpack from 'webpack';
 export const commonConfig: webpack.Configuration = {
   entry: path.resolve(__dirname, '..', 'src', 'index.tsx'),
   output: {
-    filename: 'bundle.js?v=[hash]',
+    filename: 'bundle.js?v=[chunkhash]',
     path: path.resolve(__dirname, '..', 'build'),
   },
   module: {
@@ -21,12 +21,19 @@ export const commonConfig: webpack.Configuration = {
         },
       },
       {
-        test: /\.(png|svg|pdf)$/,
+        test: /\.(png|svg|pdf|webmanifest)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/[name].[ext]?v=[hash]',
         }
-      }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader',
+        query: {
+          interpolate: 'require',
+        },
+      },
     ],
   },
   plugins: [
