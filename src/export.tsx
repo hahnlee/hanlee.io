@@ -12,7 +12,7 @@ const html: string = `
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>sn0wle0pard</title>
+    <title>hahnlee</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>

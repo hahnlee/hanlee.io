@@ -2,7 +2,7 @@
   "name": "sn0wle0pard.io",
   "version": "1.0.0",
   "private": true,
-  "description": "sn0wle0pard resume site",
+  "description": "Han Lee resume site",
   "scripts": {
     "preghpage": "npm run build && touch build/.nojekyll && echo 'sn0wle0pard.io' > build/CNAME",
     "ghpage": "node script/publish.js",
@@ -10,7 +10,7 @@
     "webpack": "webpack --config ./config/webpack.production.ts",
     "start": "ts-node script/start.ts"
   },
-  "author": "Han Lee(sn0wle0pard)",
+  "author": "Han Lee",
   "license": "ISC",
   "dependencies": {
     "gh-pages": "^1.1.0",

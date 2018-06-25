@@ -6,6 +6,6 @@ ghpages.publish('build', {
     '!**/*.map',
   ],
   branch: 'master',
-  repo: 'https://github.com/sn0wle0pard/sn0wle0pard.github.io.git',
+  repo: 'https://github.com/hahnlee/sn0wle0pard.github.io.git',
   dotfiles: true,
 });

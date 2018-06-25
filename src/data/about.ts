@@ -14,11 +14,11 @@ export const AboutData: IAboutData = {
   outLinks: [
     {
       logo: 'github',
-      link: 'https://github.com/sn0wle0pard',
+      link: 'https://github.com/hahnlee',
     },
     {
       'logo': 'linkedin',
-      'link': 'https://www.linkedin.com/in/sn0wle0pard/',
+      'link': 'https://www.linkedin.com/in/hahnl/',
     },
     {
       logo: 'facebook',
