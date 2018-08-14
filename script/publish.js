@@ -1,6 +1,7 @@
 const ghpages = require('gh-pages');
 
-ghpages.publish('build', {
+
+ghpages.publish('dist', {
   src: [
     '**/*',
     '!**/*.map',

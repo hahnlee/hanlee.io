@@ -3,6 +3,7 @@ import * as path from 'path';
 import * as autoprefixer from 'autoprefixer';
 import * as webpack from 'webpack';
 import * as merge from 'webpack-merge';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import { commonConfig } from './webpack.common';
 
@@ -52,6 +53,10 @@ export default merge({}, commonConfig, {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '..', 'static', 'index.html'),
+      hash: true,
+      }),
   ],
   devServer: {
     contentBase: path.join(__dirname, '..', 'out'),

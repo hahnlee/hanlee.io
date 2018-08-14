@@ -4,10 +4,11 @@
   "private": true,
   "description": "Han Lee resume site",
   "scripts": {
-    "preghpage": "npm run build && touch build/.nojekyll && echo 'sn0wle0pard.io' > build/CNAME",
+    "preghpage": "yarn build && touch dist/.nojekyll && echo 'sn0wle0pard.io' > dist/CNAME",
     "ghpage": "node script/publish.js",
-    "build": "npm run webpack",
-    "webpack": "webpack --config ./config/webpack.production.ts",
+    "build": "yarn webpack && yarn export",
+    "webpack": "webpack --config ./config/webpack.production.client.ts",
+    "export": "ts-node script/export.ts",
     "start": "ts-node script/start.ts"
   },
   "author": "Han Lee",

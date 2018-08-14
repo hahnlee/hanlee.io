@@ -1,7 +1,7 @@
 import * as path from 'path';
 
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as webpack from 'webpack';
+
 
 export const commonConfig: webpack.Configuration = {
   entry: path.resolve(__dirname, '..', 'src', 'index.tsx'),
@@ -36,12 +36,6 @@ export const commonConfig: webpack.Configuration = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, '..', 'static', 'index.html'),
-      hash: true,
-    }),
-  ],
   resolve: {
     extensions: [
       '.js',

@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 import { App } from 'containers';
 
+
 console.log('Hello developer!!');
 console.log('mail: mailto://hanlee.dev@gmail.com');
 console.log(
@@ -20,4 +21,4 @@ console.log(
   'color:#5ABEFF',
 );
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

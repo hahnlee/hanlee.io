@@ -130,5 +130,6 @@ $RECYCLE.BIN/
 package-lock.json
 
 build/
+dist/
 
 .awcache/

@@ -5,47 +5,10 @@ import * as ReactDOMServer from 'react-dom/server';
 
 import { App } from 'containers';
 
-const reactHtml: string = ReactDOMServer.renderToStaticMarkup(<App/>);
-const html: string = `
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>hahnlee</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    ${reactHtml}
-    <script>
-      console.log('Hello developer!!');
-      console.log('mail: mailto://hanlee.dev@gmail.com');
-      console.log(
-        '%c███████╗███╗   ██╗ ██████╗ ██╗    ██╗██╗     ███████╗ ██████╗ ██████╗  █████╗ ██████╗ ██████╗\\n' +
-        '%c██╔════╝████╗  ██║██╔═████╗██║    ██║██║     ██╔════╝██╔═████╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗\\n' +
-        '%c███████╗██╔██╗ ██║██║██╔██║██║ █╗ ██║██║     █████╗  ██║██╔██║██████╔╝███████║██████╔╝██║  ██║\\n' +
-        '%c╚════██║██║╚██╗██║████╔╝██║██║███╗██║██║     ██╔══╝  ████╔╝██║██╔═══╝ ██╔══██║██╔══██╗██║  ██║\\n' +
-        '%c███████║██║ ╚████║╚██████╔╝╚███╔███╔╝███████╗███████╗╚██████╔╝██║     ██║  ██║██║  ██║██████╔╝\\n' +
-        '%c╚══════╝╚═╝  ╚═══╝ ╚═════╝  ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝\\n',
-        'color:#0078FF;',
-        'color:#148CFF;',
-        'color:#28A0FF;',
-        'color:#3CB4FF;',
-        'color:#50C8FF;',
-        'color:#5ABEFF',
-      );
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111601591-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-111601591-1');
-    </script>
-  </body>
-</html>
-`;
+const reactHtml = ReactDOMServer.renderToString(<App />);
+const html = fs.readFileSync('dist/index.html')
+  .toString()
+  .replace('<!--REACT-DATA-->', reactHtml);
 
-fs.writeFileSync('build/index.html', html, 'utf8');
+fs.writeFileSync('dist/index.html', html, 'utf8');

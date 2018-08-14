@@ -1,13 +1,17 @@
 import * as path from 'path';
 
 import * as autoprefixer from 'autoprefixer';
-import * as webpack from 'webpack';
 import * as merge from 'webpack-merge';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import { commonConfig } from './webpack.common';
 
+
 export default merge({}, commonConfig, {
+  output: {
+    path: path.resolve(__dirname, '..', 'dist'),
+  },
   module: {
     rules: [
       {
@@ -35,17 +39,21 @@ export default merge({}, commonConfig, {
             },
             {
               loader: 'sass-loader',
-            }
+            },
           ],
-        })
+        }),
       },
     ],
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, '..', 'static', 'index.html'),
+      hash: true,
+    }),
+    new ExtractTextPlugin({
+      filename: 'styles.css',
+      allChunks: true,
+    }),
   ],
-  node: {
-    fs: 'empty',
-  },
   mode: 'production',
 });

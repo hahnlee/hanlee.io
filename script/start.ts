@@ -3,10 +3,11 @@ import * as WebpackDevServer from 'webpack-dev-server';
 
 import renderConfig from '../config/webpack.development';
 
-const compiler: webpack.Compiler = webpack(renderConfig);
-const port: number = 3000;
 
-let devServer = new WebpackDevServer(compiler, renderConfig.devServer);
+const compiler = webpack(renderConfig);
+const port = 3000;
+
+const devServer = new WebpackDevServer(compiler, renderConfig.devServer);
 devServer.listen(port, 'localhost', err => {
   if (err) {
     console.log(err);
