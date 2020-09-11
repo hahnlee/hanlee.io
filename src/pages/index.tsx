@@ -128,15 +128,21 @@ function IndexPage({ data: { allMdx: { edges } } }) {
           <Column>
             <CareerTitle>경력</CareerTitle>
             <p>
+              <CompanyName>Viva Republica (Toss)</CompanyName>
+              <Divider>|</Divider>
+              <Date>2020.09. - 현재</Date>
+            </p>
+            프론트엔드 엔지니어
+            <p>
               <CompanyName>ZOYI Corporation</CompanyName>
               <Divider>|</Divider>
-              <Date>2018.11. - 현재</Date>
+              <Date>2018.11. - 2020.09.</Date>
             </p>
             채널톡 프론트엔드 리드 엔지니어
             <p>
               <CompanyName>peoplefund</CompanyName>
               <Divider>|</Divider>
-              <Date> 2017.04 - 2018.02</Date>
+              <Date> 2017.04 - 2018.02.</Date>
             </p>
             백엔드 엔지니어 인턴
           </Column>
@@ -146,7 +152,7 @@ function IndexPage({ data: { allMdx: { edges } } }) {
             <p>
               <CompanyName>UNIST</CompanyName>
               <Divider>|</Divider>
-              <Date>2015 - 휴학중</Date>
+              <Date>2015. - 휴학중</Date>
             </p>
             <p>컴퓨터공학과 학사과정</p>
           </Column>
