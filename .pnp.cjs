@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/node", "npm:17.0.21"],\
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
             ["next", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:12.1.0"],\
@@ -151,6 +152,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/node", [\
+        ["npm:17.0.21", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-17.0.21-7d68eb6a13-89dcd2fe82.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:17.0.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/prop-types", [\
         ["npm:15.7.4", {\
           "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.4-592896a9fe-ef6e1899e5.zip/node_modules/@types/prop-types/",\
@@ -214,6 +224,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hanlee.io", "workspace:."],\
+            ["@types/node", "npm:17.0.21"],\
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
             ["next", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:12.1.0"],\
