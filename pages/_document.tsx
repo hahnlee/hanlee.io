@@ -12,7 +12,7 @@ export default function Document() {
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Anton"
           rel="stylesheet"
         />
         <style
