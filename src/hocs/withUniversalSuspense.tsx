@@ -1,4 +1,4 @@
-import UniversalSuspense from '@components/UniversalSuspense'
+import UniversalSuspense from '@elements/UniversalSuspense'
 import { ComponentType, SuspenseProps } from 'react'
 
 export default function withUniversalSuspense<P>(
