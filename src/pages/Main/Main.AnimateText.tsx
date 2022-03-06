@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { motion, TargetAndTransition } from 'framer-motion'
 
-import { styled } from '@styles/stitches.config'
+import { styled } from '@styles/stitches'
 
 interface Props {
   children: ReactNode

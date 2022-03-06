@@ -1,6 +1,6 @@
 import PendingIndicator from '@elements/PendingIndicator'
 import withUniversalSuspense from '@hocs/withUniversalSuspense'
-import { styled } from '@styles/stitches.config'
+import { styled } from '@styles/stitches'
 import { waitUntilFontLoad } from '@utils/font'
 
 import AnimateText from './Main.AnimateText'
