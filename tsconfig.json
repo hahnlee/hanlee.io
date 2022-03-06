@@ -20,6 +20,12 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
+      "@models/*": [
+        "models/*"
+      ],
+      "@contexts/*": [
+        "contexts/*"
+      ],
       "@components/*": [
         "components/*"
       ],
@@ -34,6 +40,9 @@
       ],
       "@pages/*": [
         "pages/*"
+      ],
+      "@remotes/*": [
+        "remotes/*"
       ],
       "@utils/*": [
         "utils/*"

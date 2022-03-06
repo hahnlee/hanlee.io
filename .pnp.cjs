@@ -38,6 +38,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
             ["framer-motion", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:6.2.8"],\
+            ["ky", "npm:0.30.0"],\
+            ["ky-universal", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:0.10.0"],\
             ["next", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:12.1.0"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:17.0.2"],\
@@ -244,6 +246,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["abort-controller", [\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/abort-controller-npm-3.0.0-2f3a9a2bcb-170bdba9b4.zip/node_modules/abort-controller/",\
+          "packageDependencies": [\
+            ["abort-controller", "npm:3.0.0"],\
+            ["event-target-shim", "npm:5.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["caniuse-lite", [\
         ["npm:1.0.30001313", {\
           "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001313-ee73aba65d-49f2dcd1fa.zip/node_modules/caniuse-lite/",\
@@ -258,6 +270,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/csstype-npm-3.0.11-b49897178d-95e56abfe9.zip/node_modules/csstype/",\
           "packageDependencies": [\
             ["csstype", "npm:3.0.11"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["data-uri-to-buffer", [\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/data-uri-to-buffer-npm-4.0.0-e7a49f58f7-a010653869.zip/node_modules/data-uri-to-buffer/",\
+          "packageDependencies": [\
+            ["data-uri-to-buffer", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["event-target-shim", [\
+        ["npm:5.0.1", {\
+          "packageLocation": "./.yarn/cache/event-target-shim-npm-5.0.1-cb48709025-1ffe3bb22a.zip/node_modules/event-target-shim/",\
+          "packageDependencies": [\
+            ["event-target-shim", "npm:5.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["fetch-blob", [\
+        ["npm:3.1.4", {\
+          "packageLocation": "./.yarn/cache/fetch-blob-npm-3.1.4-478ba5034d-81b074f38a.zip/node_modules/fetch-blob/",\
+          "packageDependencies": [\
+            ["fetch-blob", "npm:3.1.4"],\
+            ["node-domexception", "npm:1.0.0"],\
+            ["web-streams-polyfill", "npm:3.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["formdata-polyfill", [\
+        ["npm:4.0.10", {\
+          "packageLocation": "./.yarn/cache/formdata-polyfill-npm-4.0.10-e03013c013-82a34df292.zip/node_modules/formdata-polyfill/",\
+          "packageDependencies": [\
+            ["formdata-polyfill", "npm:4.0.10"],\
+            ["fetch-blob", "npm:3.1.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -314,6 +365,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
             ["framer-motion", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:6.2.8"],\
+            ["ky", "npm:0.30.0"],\
+            ["ky-universal", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:0.10.0"],\
             ["next", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:12.1.0"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:17.0.2"],\
@@ -336,6 +389,43 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/js-tokens-npm-4.0.0-0ac852e9e2-8a95213a5a.zip/node_modules/js-tokens/",\
           "packageDependencies": [\
             ["js-tokens", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["ky", [\
+        ["npm:0.30.0", {\
+          "packageLocation": "./.yarn/cache/ky-npm-0.30.0-ead89c9778-d6ec6461e1.zip/node_modules/ky/",\
+          "packageDependencies": [\
+            ["ky", "npm:0.30.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["ky-universal", [\
+        ["npm:0.10.0", {\
+          "packageLocation": "./.yarn/cache/ky-universal-npm-0.10.0-0b9da48f76-d4848d30cd.zip/node_modules/ky-universal/",\
+          "packageDependencies": [\
+            ["ky-universal", "npm:0.10.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:0.10.0", {\
+          "packageLocation": "./.yarn/__virtual__/ky-universal-virtual-906378fc3b/0/cache/ky-universal-npm-0.10.0-0b9da48f76-d4848d30cd.zip/node_modules/ky-universal/",\
+          "packageDependencies": [\
+            ["ky-universal", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:0.10.0"],\
+            ["@types/ky", null],\
+            ["@types/web-streams-polyfill", null],\
+            ["abort-controller", "npm:3.0.0"],\
+            ["ky", "npm:0.30.0"],\
+            ["node-fetch", "npm:3.2.0"],\
+            ["web-streams-polyfill", null]\
+          ],\
+          "packagePeers": [\
+            "@types/ky",\
+            "@types/web-streams-polyfill",\
+            "ky",\
+            "web-streams-polyfill"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -409,6 +499,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-dom",\
             "react",\
             "sass"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["node-domexception", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/node-domexception-npm-1.0.0-e1e813b76f-ee1d37dd2a.zip/node_modules/node-domexception/",\
+          "packageDependencies": [\
+            ["node-domexception", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["node-fetch", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/node-fetch-npm-3.2.0-43b96df788-1c809a0f64.zip/node_modules/node-fetch/",\
+          "packageDependencies": [\
+            ["node-fetch", "npm:3.2.0"],\
+            ["data-uri-to-buffer", "npm:4.0.0"],\
+            ["fetch-blob", "npm:3.1.4"],\
+            ["formdata-polyfill", "npm:4.0.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -590,6 +701,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/react",\
             "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["web-streams-polyfill", [\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/web-streams-polyfill-npm-3.2.0-d541199f29-e23ad06493.zip/node_modules/web-streams-polyfill/",\
+          "packageDependencies": [\
+            ["web-streams-polyfill", "npm:3.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\

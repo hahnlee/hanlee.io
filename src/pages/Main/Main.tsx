@@ -1,11 +1,33 @@
-import Header from './Main.Header'
+import { GetStaticPropsResult } from 'next'
 
-function Main() {
+import { SponsoringProvider } from '@contexts/Sponsoring'
+import { Sponsoring } from '@models/Sponsoring'
+
+import Header from './Main.Header'
+import { getSponsoring } from '@remotes/github'
+
+interface Props {
+  sponsoring: Sponsoring[]
+}
+
+function Main({ sponsoring }: Props) {
   return (
-    <main>
-      <Header />
-    </main>
+    <SponsoringProvider value={sponsoring}>
+      <main>
+        <Header />
+      </main>
+    </SponsoringProvider>
   )
+}
+
+export async function getStaticProps(): Promise<GetStaticPropsResult<Props>> {
+  const sponsoring = await getSponsoring('hahnlee')
+
+  return {
+    props: {
+      sponsoring,
+    },
+  }
 }
 
 export default Main
