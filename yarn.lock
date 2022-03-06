@@ -89,6 +89,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@stitches/react@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@stitches/react@npm:1.2.7"
+  peerDependencies:
+    react: ">= 16.3.0"
+  checksum: f4a66d208607a5f72d902d06388c0e3c5cec6cccc207e3b01228d3dc8e5b09742f4191fe932fac84c19ece825df174009025ba5939511501914785ed26a2c767
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^17.0.21":
   version: 17.0.21
   resolution: "@types/node@npm:17.0.21"
@@ -148,6 +157,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hanlee.io@workspace:."
   dependencies:
+    "@stitches/react": ^1.2.7
     "@types/node": ^17.0.21
     "@types/react": ^17
     "@types/react-dom": ^17

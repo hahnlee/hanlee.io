@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@stitches/react", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.2.7"],\
             ["@types/node", "npm:17.0.21"],\
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
@@ -152,6 +153,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@stitches/react", [\
+        ["npm:1.2.7", {\
+          "packageLocation": "./.yarn/cache/@stitches-react-npm-1.2.7-f56948d6aa-f4a66d2086.zip/node_modules/@stitches/react/",\
+          "packageDependencies": [\
+            ["@stitches/react", "npm:1.2.7"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.2.7", {\
+          "packageLocation": "./.yarn/__virtual__/@stitches-react-virtual-832e932b3f/0/cache/@stitches-react-npm-1.2.7-f56948d6aa-f4a66d2086.zip/node_modules/@stitches/react/",\
+          "packageDependencies": [\
+            ["@stitches/react", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.2.7"],\
+            ["@types/react", "npm:17.0.39"],\
+            ["react", "npm:17.0.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/node", [\
         ["npm:17.0.21", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.21-7d68eb6a13-89dcd2fe82.zip/node_modules/@types/node/",\
@@ -224,6 +247,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["hanlee.io", "workspace:."],\
+            ["@stitches/react", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.2.7"],\
             ["@types/node", "npm:17.0.21"],\
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\

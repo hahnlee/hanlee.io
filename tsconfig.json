@@ -37,6 +37,9 @@
       ],
       "@utils/*": [
         "utils/*"
+      ],
+      "@styles/*": [
+        "styles/*"
       ]
     }
   },
