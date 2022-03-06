@@ -1,16 +1,24 @@
+import { globalCss } from '@stitches/react'
 import { GetStaticPropsResult } from 'next'
 
 import { SponsoringProvider } from '@contexts/Sponsoring'
 import { Sponsoring } from '@models/Sponsoring'
+import { getSponsoring } from '@remotes/github'
 
 import Header from './Main.Header'
-import { getSponsoring } from '@remotes/github'
 
 interface Props {
   sponsoring: Sponsoring[]
 }
 
+const globalStyles = globalCss({
+  body: { margin: 0 },
+});
+
+
 function Main({ sponsoring }: Props) {
+  globalStyles()
+
   return (
     <SponsoringProvider value={sponsoring}>
       <main>

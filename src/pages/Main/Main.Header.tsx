@@ -21,11 +21,14 @@ function Header() {
   )
 }
 
-const Container = styled('header', {
-  padding: '24px 0',
+const Container = styled('section', {
+  height: '100vh',
+  padding: '24px',
 })
 
 const H1 = styled('h1', {
+  position: 'sticky',
+  top: 'calc(50vh - 145px)',
   margin: 0,
   fontSize: 80,
   lineHeight: 0.85,
@@ -34,7 +37,7 @@ const H1 = styled('h1', {
 // TODO: (@hahnlee) create loader
 export default withUniversalSuspense(Header, {
   fallback: (
-    <PendingIndicator as="header" loader={<div>Loading...</div>}>
+    <PendingIndicator as={Container} loader={<div>Loading...</div>}>
       <h1>
         <span>Coding</span>
         <br />
