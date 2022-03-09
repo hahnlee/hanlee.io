@@ -20,6 +20,12 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
+      "@models/*": [
+        "models/*"
+      ],
+      "@contexts/*": [
+        "contexts/*"
+      ],
       "@components/*": [
         "components/*"
       ],
@@ -35,12 +41,18 @@
       "@pages/*": [
         "pages/*"
       ],
-      "@utils/*": [
-        "utils/*"
+      "@remotes/*": [
+        "remotes/*"
+      ],
+      "@store/*": [
+        "store/*"
       ],
       "@styles/*": [
         "styles/*"
-      ]
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
     }
   },
   "include": [
