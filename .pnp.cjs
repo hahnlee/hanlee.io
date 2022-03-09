@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
             ["framer-motion", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:6.2.8"],\
+            ["jotai", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.6.0"],\
             ["ky", "npm:0.30.0"],\
             ["ky-universal", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:0.10.0"],\
             ["next", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:12.1.0"],\
@@ -365,6 +366,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.39"],\
             ["@types/react-dom", "npm:17.0.13"],\
             ["framer-motion", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:6.2.8"],\
+            ["jotai", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.6.0"],\
             ["ky", "npm:0.30.0"],\
             ["ky-universal", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:0.10.0"],\
             ["next", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:12.1.0"],\
@@ -380,6 +382,64 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/hey-listen-npm-1.0.8-adb7dae9da-6bad60b367.zip/node_modules/hey-listen/",\
           "packageDependencies": [\
             ["hey-listen", "npm:1.0.8"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["jotai", [\
+        ["npm:1.6.0", {\
+          "packageLocation": "./.yarn/cache/jotai-npm-1.6.0-a4862e6f7b-fb8ec6e283.zip/node_modules/jotai/",\
+          "packageDependencies": [\
+            ["jotai", "npm:1.6.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.6.0", {\
+          "packageLocation": "./.yarn/__virtual__/jotai-virtual-40dc631641/0/cache/jotai-npm-1.6.0-a4862e6f7b-fb8ec6e283.zip/node_modules/jotai/",\
+          "packageDependencies": [\
+            ["jotai", "virtual:d2e417e2bf7931f235d1773786d334d60a2ea6d8798fe71ed74505d6d69065ccfce2caf18a57987a97f5169ae8129fa1001126238a37db25f9a09d904d5f3ee5#npm:1.6.0"],\
+            ["@babel/core", null],\
+            ["@babel/template", null],\
+            ["@types/babel__core", null],\
+            ["@types/babel__template", null],\
+            ["@types/immer", null],\
+            ["@types/optics-ts", null],\
+            ["@types/react", "npm:17.0.39"],\
+            ["@types/react-query", null],\
+            ["@types/urql__core", null],\
+            ["@types/valtio", null],\
+            ["@types/wonka", null],\
+            ["@types/xstate", null],\
+            ["@urql/core", null],\
+            ["immer", null],\
+            ["optics-ts", null],\
+            ["react", "npm:17.0.2"],\
+            ["react-query", null],\
+            ["valtio", null],\
+            ["wonka", null],\
+            ["xstate", null]\
+          ],\
+          "packagePeers": [\
+            "@babel/core",\
+            "@babel/template",\
+            "@types/babel__core",\
+            "@types/babel__template",\
+            "@types/immer",\
+            "@types/optics-ts",\
+            "@types/react-query",\
+            "@types/react",\
+            "@types/urql__core",\
+            "@types/valtio",\
+            "@types/wonka",\
+            "@types/xstate",\
+            "@urql/core",\
+            "immer",\
+            "optics-ts",\
+            "react-query",\
+            "react",\
+            "valtio",\
+            "wonka",\
+            "xstate"\
           ],\
           "linkType": "HARD"\
         }]\

@@ -3,20 +3,14 @@ import withUniversalSuspense from '@hocs/withUniversalSuspense'
 import { styled } from '@styles/stitches'
 import { waitUntilFontLoad } from '@utils/font'
 
-import AnimateText from './Main.AnimateText'
+import AnimateHeading from './Main.AnimateHeading'
 
-function Header() {
+function Intro() {
   waitUntilFontLoad('normal 80px Anton')
 
   return (
     <Container>
-      <H1>
-        <AnimateText order={0}>Coding</AnimateText>
-        <br />
-        <AnimateText order={1}>A Better World</AnimateText>
-        <br />
-        <AnimateText order={2}>Together</AnimateText>
-      </H1>
+      <AnimateHeading />
     </Container>
   )
 }
@@ -26,16 +20,8 @@ const Container = styled('section', {
   padding: '24px',
 })
 
-const H1 = styled('h1', {
-  position: 'sticky',
-  top: 'calc(50vh - 145px)',
-  margin: 0,
-  fontSize: 80,
-  lineHeight: 0.85,
-})
-
 // TODO: (@hahnlee) create loader
-export default withUniversalSuspense(Header, {
+export default withUniversalSuspense(Intro, {
   fallback: (
     <PendingIndicator as={Container} loader={<div>Loading...</div>}>
       <h1>

@@ -44,12 +44,15 @@
       "@remotes/*": [
         "remotes/*"
       ],
-      "@utils/*": [
-        "utils/*"
+      "@store/*": [
+        "store/*"
       ],
       "@styles/*": [
         "styles/*"
-      ]
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
     }
   },
   "include": [
