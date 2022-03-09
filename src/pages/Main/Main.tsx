@@ -1,11 +1,15 @@
 import { globalCss } from '@stitches/react'
 import { GetStaticPropsResult } from 'next'
 
+import BetterWorldSection from '@components/BetterWorldSection'
+import CodingSection from '@components/CodingSection'
+import TogetherSection from '@components/TogetherSection'
 import { SponsoringProvider } from '@contexts/Sponsoring'
 import { Sponsoring } from '@models/Sponsoring'
 import { getSponsoring } from '@remotes/github'
 
-import Header from './Main.Header'
+import Intro from './Main.Intro'
+import Navbar from './Main.Navbar'
 
 interface Props {
   sponsoring: Sponsoring[]
@@ -21,8 +25,12 @@ function Main({ sponsoring }: Props) {
 
   return (
     <SponsoringProvider value={sponsoring}>
+      <Navbar />
       <main>
-        <Header />
+        <Intro />
+        <CodingSection />
+        <BetterWorldSection />
+        <TogetherSection />
       </main>
     </SponsoringProvider>
   )
