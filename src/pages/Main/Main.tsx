@@ -16,9 +16,9 @@ interface Props {
 }
 
 const globalStyles = globalCss({
+  '*': { boxSizing: 'border-box' },
   body: { margin: 0 },
-});
-
+})
 
 function Main({ sponsoring }: Props) {
   globalStyles()
