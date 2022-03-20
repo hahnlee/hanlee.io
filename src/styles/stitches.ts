@@ -11,6 +11,7 @@ const { styled, getCssText, keyframes } = createStitches({
       grey600: '#868E96',
       grey700: '#495057',
       grey800: '#343A40',
+      grey900: '#212529',
     },
   },
 })

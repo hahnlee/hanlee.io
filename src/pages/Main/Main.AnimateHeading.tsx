@@ -86,7 +86,7 @@ const Text = styled(motion.span, {
   margin: 0,
   fontFamily: 'Anton',
   fontWeight: 'normal',
-  color: '$grey800',
+  color: '$grey900',
 })
 
 function createAnimate(order: number, scrolled: boolean): Transition {

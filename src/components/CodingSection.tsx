@@ -12,25 +12,13 @@ export default function CodingSection() {
         setSection('coding')
       }}
     >
-      <Section>
-        <H1>
-          ❤️ <span>TypeScript / Rust / React / Suspense for data fetching</span>
-        </H1>
-      </Section>
+      <section>
+      </section>
     </Root>
   )
 }
 
 const Root = styled(InView, {
   minHeight: '100vh',
-})
-
-const Section = styled('section', {
-  padding: '0 24px',
-})
-
-const H1 = styled('h1', {
-  position: 'sticky',
-  top: 100,
-  backgroundColor: 'white',
+  backgroundColor: '$grey900',
 })
