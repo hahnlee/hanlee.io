@@ -11,13 +11,15 @@ import { getSponsoring } from '@remotes/github'
 import Intro from './Main.Intro'
 import Navbar from './Main.Navbar'
 
+import 'pretendard/dist/web/static/pretendard.css'
+
 interface Props {
   sponsoring: Sponsoring[]
 }
 
 const globalStyles = globalCss({
   '*': { boxSizing: 'border-box' },
-  body: { margin: 0 },
+  body: { margin: 0, fontFamily: ['Pretendard', 'sans-serif'].join(',') },
 })
 
 function Main({ sponsoring }: Props) {

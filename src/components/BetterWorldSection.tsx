@@ -1,23 +1,26 @@
-import { styled } from '@stitches/react'
 import { navbarSection } from '@store/navbar'
+import { styled } from '@styles/stitches'
 import { useSetAtom } from 'jotai'
 import InView from './InView'
+import SponsoringSection from './SponsoringSection'
 
 export default function BetterWorldSection() {
   const setSection = useSetAtom(navbarSection)
 
   return (
-    <InView
+    <Root
       onInView={() => {
         setSection('world')
       }}
     >
-      <Section></Section>
-    </InView>
+      <SponsoringSection />
+    </Root>
   )
 }
 
-const Section = styled('section', {
-  height: '100vh',
-  padding: '0 24px',
+const Root = styled(InView, {
+  minHeight: '100vh',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 })

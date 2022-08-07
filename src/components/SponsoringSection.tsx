@@ -18,21 +18,18 @@ export default function SponsoringSection() {
         <p>
           우리는 다른 많은 개발자의 작업물을 사용하며 제품을 만들고 수익을 내고
           있습니다.
-        </p>
-        <p>
+          <br />
           우리의 고민을 덜어준 개발자들에게도 보상이 돌아가야하며, 생태계를
           유지해야합니다.
         </p>
-        <p>
-          <a href="https://github.com/hahnlee?tab=sponsoring">더보기</a>
-        </p>
+        <Link href="https://github.com/hahnlee?tab=sponsoring">더보기</Link>
       </Description>
     </Section>
   )
 }
 
 const Section = styled('section', {
-  padding: '84px 24px',
+  padding: '150px 24px',
 })
 
 const Avatar = styled('img', {
@@ -62,4 +59,17 @@ const ListItem = styled('div', {
 
 const Description = styled('div', {
   textAlign: 'center',
+  p: {
+    fontSize: '1.75rem',
+    lineHeight: 1.5,
+    fontWeight: 600,
+  },
+})
+
+const Link = styled('a', {
+  fontSize: '1.25rem',
+  lineHeight: 1.5,
+  fontWeight: 400,
+  color: '$blue700',
+  textDecoration: 'none',
 })

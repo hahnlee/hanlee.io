@@ -2,7 +2,6 @@ import { styled } from '@styles/stitches'
 import { navbarSection } from '@store/navbar'
 import { useSetAtom } from 'jotai'
 import InView from './InView'
-import SponsoringSection from './SponsoringSection'
 
 export default function TogetherSection() {
   const setSection = useSetAtom(navbarSection)
@@ -13,7 +12,6 @@ export default function TogetherSection() {
         setSection('together')
       }}
     >
-      <SponsoringSection />
       <Section>
         <Frame>
           <iframe
@@ -27,18 +25,29 @@ export default function TogetherSection() {
           />
         </Frame>
       </Section>
+      <Section style={{ marginTop: 100 }}>
+        <h1>연락처</h1>
+        <Contract>
+          <a href="https://github.com/hahnlee">GitHub</a>
+          <a href="https://www.linkedin.com/in/hahnl/">LinkedIn</a>
+          <a href="https://blog.hanlee.io">Blog</a>
+          <a href="mailto:hanlee.dev@gmail.com">Mail</a>
+        </Contract>
+      </Section>
     </Root>
   )
 }
 
 const Root = styled(InView, {
   minHeight: '100vh',
+  padding: '48px 24px',
 })
 
 const Section = styled('section', {
   display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column',
   justifyContent: 'center',
-  padding: '48px 24px',
 })
 
 const Frame = styled('div', {
@@ -51,4 +60,15 @@ const Frame = styled('div', {
   iframe: {
     width: '100%',
   },
+})
+
+const Contract = styled('div', {
+  a: {
+    fontSize: '1.25rem',
+    color: '$grey800',
+    textDecoration: 'none',
+    '& + &': {
+      marginLeft: 16
+    }
+  }
 })
