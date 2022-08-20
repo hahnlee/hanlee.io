@@ -64,6 +64,9 @@ const Header = styled('header', {})
 const Content = styled('div', {
   display: 'grid',
   gridTemplateColumns: '1fr 1fr 1fr 1fr',
+  '@media screen and (max-width: 800px)': {
+    gridTemplateColumns: '1fr 1fr',
+  }
 })
 
 const Logo = styled('img', {

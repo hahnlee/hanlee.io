@@ -15,8 +15,6 @@ export default function TogetherSection() {
       <Section>
         <Frame>
           <iframe
-            width="560"
-            height="315"
             src="https://www.youtube.com/embed/SVRiktFlWxI"
             title="YouTube video player"
             frameBorder="0"
@@ -51,14 +49,13 @@ const Section = styled('section', {
 })
 
 const Frame = styled('div', {
-  width: 560,
-  height: 315,
   margin: '0 auto',
   overflow: 'hidden',
   borderRadius: 16,
   boxShadow: 'rgba(0, 0, 0, 0.15) 14px 20px 20px 6px',
   iframe: {
     width: '100%',
+    aspectRatio: '16 / 9',
   },
 })
 
